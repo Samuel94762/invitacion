@@ -123,7 +123,7 @@ const server = http.createServer(async (req, res) => {
 
   // ── API: GET /api/guests?pwd=XXX  ─────────────────────────────
   if (pathname === "/api/guests" && method === "GET") {
-    const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "Sofia2025#";
+    const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "Sarahi2026#";
     if (parsed.query.pwd !== ADMIN_PASSWORD) {
       return jsonResponse(res, 401, { ok: false, error: "No autorizado." });
     }
