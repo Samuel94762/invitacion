@@ -58,7 +58,7 @@
         justify-content: center;
         gap: 2.5rem;
         padding: 0.9rem 2rem;
-        background: rgba(247, 243, 238, 0.93);
+        background: rgba(248, 247, 250, 0.93);
         backdrop-filter: blur(8px);
         border-bottom: 1px solid var(--parchment);
         font-size: 0.75rem;
@@ -108,12 +108,12 @@
         background:
           radial-gradient(
             ellipse 80% 60% at 50% 40%,
-            #ede0ce 0%,
+            #e6dcf3 0%,
             transparent 70%
           ),
           radial-gradient(
             ellipse 50% 50% at 15% 85%,
-            #d9cfbf44 0%,
+            #dcd2eb44 0%,
             transparent 60%
           ),
           var(--cream);
@@ -130,7 +130,7 @@
       .ring-1 {
         width: 420px;
         height: 420px;
-        border-color: rgba(201, 169, 110, 0.18);
+        border-color: rgba(184, 160, 208, 0.25);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -139,7 +139,7 @@
       .ring-2 {
         width: 600px;
         height: 600px;
-        border-color: rgba(201, 169, 110, 0.1);
+        border-color: rgba(168, 153, 191, 0.15);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -149,7 +149,7 @@
       .ring-3 {
         width: 760px;
         height: 760px;
-        border-color: rgba(168, 152, 128, 0.07);
+        border-color: rgba(107, 92, 128, 0.1);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -360,7 +360,7 @@
 
       /* ABOUT */
       #about {
-        background: var(--white);
+        background: var(--cream);
       }
       .about-grid {
         display: grid;
@@ -498,6 +498,44 @@
         line-height: 1.5;
       }
 
+      /* REGALO */
+      #regalo {
+        background: var(--white);
+      }
+      .regalo-card {
+        background: var(--white);
+        border: 1px solid var(--parchment);
+        padding: 3rem 2rem;
+        max-width: 500px;
+        margin: 2.5rem auto 0;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(58, 43, 80, 0.04);
+      }
+      .regalo-card::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border: 1px solid var(--gold-lt);
+        pointer-events: none;
+      }
+      .regalo-qr-wrap {
+        width: 220px;
+        height: 220px;
+        margin: 2rem auto;
+        padding: 12px;
+        background: var(--white);
+        border: 1px solid var(--ivory);
+        box-shadow: 0 4px 15px rgba(58, 43, 80, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .regalo-qr-wrap img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
       /* RSVP */
       #rsvp {
         background: var(--ivory);
@@ -535,7 +573,7 @@
         border-color: var(--gold);
       }
       .form-group select {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23A89880'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236b5c80'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 1rem center;
       }
@@ -748,6 +786,7 @@
       <nav>
         <a href="#about">Ella</a>
         <a href="#lugar">Lugar</a>
+        <a href="#regalo">Regalo</a>
         <a href="#rsvp">Confirmar</a>
         <a href="/invitados" id="nav-admin">Invitados</a>
       </nav>
@@ -896,6 +935,55 @@
                 Formal elegante<br />— se sugiere tonos neutros
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REGALO -->
+      <section id="regalo">
+        <div class="section-inner" style="text-align: center">
+          <p class="section-label reveal">Lluvia de sobres</p>
+          <h2 class="section-title reveal">Un <em>detalle</em> con amor</h2>
+          <div class="gold-line reveal" style="margin: 1.5rem auto"></div>
+          <p
+            class="reveal"
+            style="
+              font-family: 'Cormorant Garamond', serif;
+              font-size: 1.15rem;
+              color: var(--mocha);
+              max-width: 550px;
+              margin: 0 auto;
+              line-height: 1.7;
+            "
+          >
+            Tu presencia es nuestro mayor regalo. Pero si deseas tener un detalle con la quinceañera, te invitamos a usar este sobre digital escaneando el siguiente código QR.
+          </p>
+          <div class="regalo-card reveal">
+            <h3
+              style="
+                font-family: 'Cinzel', serif;
+                font-size: 0.9rem;
+                letter-spacing: 0.18em;
+                color: var(--espresso);
+                font-weight: 600;
+              "
+            >
+              Sobre Digital
+            </h3>
+            <div class="regalo-qr-wrap">
+              <img src="img/qr.png" alt="Código QR de Regalo" />
+            </div>
+            <p
+              style="
+                font-size: 0.72rem;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                color: var(--taupe);
+                margin-top: 1rem;
+              "
+            >
+              Escanea desde tu app bancaria
+            </p>
           </div>
         </div>
       </section>
@@ -1398,10 +1486,10 @@
         resize();
 
         const colors = [
-          "rgba(201,169,110,.35)",
-          "rgba(168,152,128,.3)",
-          "rgba(200,169,154,.3)",
-          "rgba(60,42,30,.12)",
+          "rgba(184, 160, 208, 0.45)",
+          "rgba(216, 208, 232, 0.4)",
+          "rgba(107, 92, 128, 0.35)",
+          "rgba(58, 43, 80, 0.15)",
         ];
         function mkPetal() {
           return {
