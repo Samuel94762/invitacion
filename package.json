@@ -1,11 +1,14 @@
 {
   "name": "xv-sarahi-invitation",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Sitio web de invitación XV años — Sarahi",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "mongodb": "^7.2.0"
   },
   "engines": {
     "node": ">=18.0.0"
